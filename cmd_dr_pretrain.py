@@ -1,12 +1,4 @@
-'''
-cd /data2/chengyi/ord_reg
-source activate torch18
-python cmd_dr.py
 
-训练设置：
-POE：按照50轮:988-49400
---warmup_steps 1
-'''
 import os
 
 
