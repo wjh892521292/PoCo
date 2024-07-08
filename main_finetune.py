@@ -119,13 +119,4 @@ if __name__ == '__main__':
     #           --warmup_steps 100 --save_log /data2/wangjinhong/output/wjh/save_log/Cataract_OCT/logs_catar_test/ --batch_size 8 --display_freq 1 --val_freq 10 --lr 0.1 --z_dim 128 --resnet_layers 18  --dropout 0.5 --gpu_id 0'.split()
     args = cfg.initialize(fixed)
     main(args)
-'--data_name aesthetics ' \
-'--img_root /data2/wangjinhong/data/ord_reg/aesthetics/ ' \
-'--data_root /data2/wangjinhong/data/ord_reg/beauty-icwsm15-dataset.tsv  ' \
- \
-'''
-cd /data2/chengyi/ord_reg
-source activate torch18
-python main.py
 
-'''
