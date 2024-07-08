@@ -31,7 +31,7 @@ cmd = 'python main_pretrain.py ' \
       '--k_fold -1 ' \
       '--polar 256 ' \
       '--pretrain ' \
-      '--save_folder /data2/wangjinhong/result/wjh/PoN/save_model/checkpoint_{ckpt_name}/ ' \
-      '--save_log /data2/wangjinhong/result/wjh/PoN/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
+      '--save_folder /.../result/PoCo/save_model/checkpoint_{ckpt_name}/ ' \
+      '--save_log /.../result/PoCo/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
 print(cmd)
 os.system(cmd)
