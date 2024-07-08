@@ -30,8 +30,8 @@ cmd = 'python main_finetune.py ' \
       '--display_freq 10 ' \
       '--k_fold 4 ' \
       '--polar 256 ' \
-      '--pretrained /data2/wangjinhong/result/wjh/PoN/save_model/checkpoint_DR_pretrain_new/only_PoCaco4_256a/resnet18_epoch_81.pth ' \
-      '--save_folder /data2/wangjinhong/result/wjh/PoN/save_model/checkpoint_{ckpt_name}/ ' \
-      '--save_log /data2/wangjinhong/result/wjh/PoN/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
+      '--pretrained /.../result/PoCo/save_model/checkpoint_DR_pretrain_new/only_PoCaco4_256a/resnet18_epoch_81.pth ' \
+      '--save_folder /.../result/PoCo/save_model/checkpoint_{ckpt_name}/ ' \
+      '--save_log /.../result/PoCo/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
 print(cmd)
 os.system(cmd)
