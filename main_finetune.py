@@ -114,9 +114,6 @@ def main(args):
 if __name__ == '__main__':
     cfg = BaseConfig()
     fixed = None
-    # if cfg.parser.parse_args().exp_name == 'test':
-    #     fixed = '--exp_name test --model_name ctt_f --max_iter 1200  --stepvalues 600 900 1100  \
-    #           --warmup_steps 100 --save_log /data2/wangjinhong/output/wjh/save_log/Cataract_OCT/logs_catar_test/ --batch_size 8 --display_freq 1 --val_freq 10 --lr 0.1 --z_dim 128 --resnet_layers 18  --dropout 0.5 --gpu_id 0'.split()
     args = cfg.initialize(fixed)
     main(args)
 
