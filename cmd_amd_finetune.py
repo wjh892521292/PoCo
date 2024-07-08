@@ -23,7 +23,7 @@ cmd = 'python main_finetune.py ' \
       '--k_fold 4 ' \
       '--polar 256 ' \
       '--pretrained /.../result/PoCo/save_model/checkpoint_DR_pretrain_new/only_PoCaco4_256a/resnet18_epoch_81.pth ' \
-      '--save_folder /.../result/PoCO/save_model/checkpoint_{ckpt_name}/ ' \
+      '--save_folder /.../result/PoCo/save_model/checkpoint_{ckpt_name}/ ' \
       '--save_log /.../result/PoCo/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
 print(cmd)
 os.system(cmd)
