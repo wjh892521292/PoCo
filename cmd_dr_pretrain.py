@@ -1,0 +1,37 @@
+'''
+cd /data2/chengyi/ord_reg
+source activate torch18
+python cmd_dr.py
+
+训练设置：
+POE：按照50轮:988-49400
+--warmup_steps 1
+'''
+import os
+
+
+
+ckpt_name = 'DR_pretrain_new'
+cmd = 'python main_pretrain.py ' \
+      '--details use_dr-train_only_PoCaco4_256a_model_with_size_to_320_crop_to_256_iteration_8w_all_fold_64-8-1 ' \
+      '--gpu_id 0 ' \
+      '--batch_size 64 ' \
+      '--exp_name only_PoCaco4_256a ' \
+      '--model_name resnet18p ' \
+      '--loss_name CELoss ' \
+      '--data_name DR_pretrain ' \
+      '--optim Adam ' \
+      '--lr 0.0001 ' \
+      '--num_classes 5 ' \
+      '--max_iter 80000 ' \
+      '--stepvalues 50000 ' \
+      '--warmup_steps 1000 ' \
+      '--val_freq 400 ' \
+      '--display_freq 50 ' \
+      '--k_fold -1 ' \
+      '--polar 256 ' \
+      '--pretrain ' \
+      '--save_folder /data2/wangjinhong/result/wjh/PoN/save_model/checkpoint_{ckpt_name}/ ' \
+      '--save_log /data2/wangjinhong/result/wjh/PoN/save_log/logs_{ckpt_name}/ '.format(ckpt_name=ckpt_name)
+print(cmd)
+os.system(cmd)
