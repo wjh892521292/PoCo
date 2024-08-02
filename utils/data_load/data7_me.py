@@ -29,7 +29,7 @@ class MyDataset(data_utils.Dataset):
 
         for i in pr:
          
-            ex_path = '/data2/wangjinhong/data/Messidor/Annotation_Base{}.xls'.format(i)
+            ex_path = '/.../Messidor/Annotation_Base{}.xls'.format(i)
             xls = xlrd.open_workbook(ex_path)                               
             sheet1 = xls.sheets()[0]
             rows = sheet1.nrows
@@ -40,7 +40,7 @@ class MyDataset(data_utils.Dataset):
 
                 if c2 > 0:
                     c2 = 1
-                self.data_list.append(['/data2/wangjinhong/data/Messidor/image/'+c1, int(c2)])
+                self.data_list.append(['/.../Messidor/image/'+c1, int(c2)])
 
 
 
