@@ -35,18 +35,18 @@ class MyDataset(data_utils.Dataset):
         for i in range(1, 90):
             if i % 5 in data_num:
                 if i<10:
-                    self.items.append(['/data2/wangjinhong/data/amd/Training400/AMD/A000{}.jpg'.format(str(i)), 0] )
+                    self.items.append(['/.../amd/Training400/AMD/A000{}.jpg'.format(str(i)), 0] )
                 elif i<100:
-                    self.items.append(['/data2/wangjinhong/data/amd/Training400/AMD/A00{}.jpg'.format(str(i)), 0])
+                    self.items.append(['/.../amd/Training400/AMD/A00{}.jpg'.format(str(i)), 0])
 
         for i in range(1, 312):
             if (i-1) % 5 in data_num:
                 if i<10:
-                    self.items.append(['/data2/wangjinhong/data/amd/Training400/Non-AMD/N000{}.jpg'.format(str(i)), 1])
+                    self.items.append(['/.../amd/Training400/Non-AMD/N000{}.jpg'.format(str(i)), 1])
                 elif i<100:
-                    self.items.append(['/data2/wangjinhong/data/amd/Training400/Non-AMD/N00{}.jpg'.format(str(i)), 1])
+                    self.items.append(['/.../amd/Training400/Non-AMD/N00{}.jpg'.format(str(i)), 1])
                 elif i<1000:
-                    self.items.append(['/data2/wangjinhong/data/amd/Training400/Non-AMD/N0{}.jpg'.format(str(i)), 1])
+                    self.items.append(['/.../amd/Training400/Non-AMD/N0{}.jpg'.format(str(i)), 1])
 
       
 
