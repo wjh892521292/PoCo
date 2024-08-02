@@ -37,7 +37,7 @@ class MyDataset(data_utils.Dataset):
 
         
         for i in data_num:
-            f = open('/data2/chengyi/dataset/ord_reg/DR_dataset/ten_fold/fold_{}.csv'.format(i), "r")
+            f = open('/.../DR_dataset/ten_fold/fold_{}.csv'.format(i), "r")
             reader = csv.reader(f)
             next(reader)
             for row in reader:
@@ -49,8 +49,7 @@ class MyDataset(data_utils.Dataset):
         item = copy.deepcopy(self.items[idx])
         img = item[0]
         label = int(item[1])
-        # img_path = '/data2/wangjinhong/data/ord_reg/DR_data/train/' + img + '.jpeg'
-        img_path = '/data2/chengyi/dataset/ord_reg/DR_dataset/train/' + img + '.jpg'
+        img_path = '/.../DR_dataset/train/' + img + '.jpg'
         # label = int(item[-1])
         img = Image.open(img_path).convert('RGB')
 
