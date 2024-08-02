@@ -17,8 +17,8 @@ class BaseConfig(object):
         #basic cfg
         self.parser.add_argument('--exp_name', type=str, help='Experiment name', default='test')
         self.parser.add_argument('--gpu_id', default='2', type=str, help='GPU ID Use to train/test module')
-        self.parser.add_argument('--save_folder', default='/data2/wangjinhong/output/wjh/save_model/Cataract_OCT/checkpoint_catar/', help='Path to save checkpoint models')
-        self.parser.add_argument('--save_log', default='/data2/wangjinhong/output/wjh/save_log/Cataract_OCT/logs_catar/',help='Path to save checkpoint models')
+        self.parser.add_argument('--save_folder', default='/.../', help='Path to save checkpoint models')
+        self.parser.add_argument('--save_log', default='/.../',help='Path to save checkpoint models')
         self.parser.add_argument('--resume', default=None, type=str, help='Path to target resume checkpoint')
         self.parser.add_argument('--pretrained', default=None, type=str, help='Path to target pretrained checkpoint')
 
