@@ -24,13 +24,7 @@ class DefaultTrainer(object):
         self.warmup_steps = args.warmup_steps
         self.eval_only = args.eval_only
         self.model = getattr(models, args.model_name.lower())(args)
-        # state_dict = '/data2/chengyi/ord_reg/result/save_model/checkpoint_catar/test2/ResTrans_best_acc_0.0200656708329916.pth'
-        # self.model.load_state_dict(torch.load(state_dict)['net_state_dict'])
-
-
-        # state_dict = '/data2/chengyi/ord_reg/result/save_model/checkpoint_catar/my_method_l2_restrans2_binary/ResTrans_best_acc_0.6545056700706482.pth'
-        # state_dict = torch.load(state_dict)
-        # self.model.load_state_dict(state_dict['net_state_dict'])
+ 
 
         self.model.cuda()
 
