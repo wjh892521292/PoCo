@@ -38,34 +38,8 @@ class DefaultTrainer(object):
         self.wrong = None
         self.log_path = os.path.join(self.args.save_folder, self.args.exp_name, 'result.txt')
         self.optim = getattr(torch.optim, args.optim)(filter(lambda p: p.requires_grad, self.model.parameters()), lr=self.lr, weight_decay=args.weight_decay)
-        # self.log = open(self.log_path, mode='w')
-        # self.log.write('============ ACC with MAE ============\n')
-        # self.log.close()
-
-        # if args.loss_name != 'POE':
-        #     if self.args.optim == 'Adam':
-        #         self.optim = torch.optim.Adam(filter(lambda p: p.requires_grad, self.model.parameters()), lr=self.lr,
-        #                                       betas=(0.9, 0.999), eps=1e-08)
-        #     else:
-        #         self.optim = getattr(torch.optim, args.optim) \
-        #             (filter(lambda p: p.requires_grad, self.model.parameters()), lr=self.lr, weight_decay=args.weight_decay)
-        # else:
-        #     # 这个只是用于vgg2的
-        #     # print('LR = 0.0001')
-        #     params = []
-        #     for keys, param_value in self.model.named_parameters():
-        #         if (is_fc(keys)):
-        #             params += [{'params': [param_value], 'lr': 0.001}]
-        #         else:
-        #             params += [{'params': [param_value], 'lr': 0.0001}]
-        #     #
-        #     self.optim = torch.optim.Adam(params, lr=self.lr,
-        #                                   betas=(0.9, 0.999), eps=1e-08)
-        #
-        # if args.resume:
-        #     if os.path.isfile(self.args.resume):
-        #         iter, index = self.load_model(args.resume)
-        #         self.start_iter = iter
+       
+     
 
     def train_iter(self, step, dataloader):
         
