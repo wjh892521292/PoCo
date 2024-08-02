@@ -35,26 +35,26 @@ class MyDataset(data_utils.Dataset):
         for i in range(1, 214):
             if i % 5 in data_num:
                 if i<10:
-                    self.items.append(['/data2/wangjinhong/data/pm/PM/P000{}.jpg'.format(str(i)), 0] )
+                    self.items.append(['/.../pm/PM/P000{}.jpg'.format(str(i)), 0] )
                 elif i<100:
-                    self.items.append(['/data2/wangjinhong/data/pm/PM/P00{}.jpg'.format(str(i)), 0])
+                    self.items.append(['/.../pm/PM/P00{}.jpg'.format(str(i)), 0])
                 elif i<1000:
-                    self.items.append(['/data2/wangjinhong/data/pm/PM/P0{}.jpg'.format(str(i)), 0])
+                    self.items.append(['/.../pm/PM/P0{}.jpg'.format(str(i)), 0])
         for i in range(1, 27):
             if (i+3) % 5 in data_num:
                 if i<10:
-                    self.items.append(['/data2/wangjinhong/data/pm/Non-Pm/H000{}.jpg'.format(str(i)), 1])
+                    self.items.append(['/.../pm/Non-Pm/H000{}.jpg'.format(str(i)), 1])
                 elif i<100:
-                    self.items.append(['/data2/wangjinhong/data/pm/Non-Pm/H00{}.jpg'.format(str(i)), 1])
+                    self.items.append(['.../pm/Non-Pm/H00{}.jpg'.format(str(i)), 1])
                 
         for i in range(1, 162):
             if (i-1) % 5 in data_num:
                 if i<10:
-                    self.items.append(['/data2/wangjinhong/data/pm/Non-Pm/N000{}.jpg'.format(str(i)), 1])
+                    self.items.append(['.../pm/Non-Pm/N000{}.jpg'.format(str(i)), 1])
                 elif i<100:
-                    self.items.append(['/data2/wangjinhong/data/pm/Non-Pm/N00{}.jpg'.format(str(i)), 1])        
+                    self.items.append(['.../pm/Non-Pm/N00{}.jpg'.format(str(i)), 1])        
                 elif i<1000:
-                    self.items.append(['/data2/wangjinhong/data/pm/Non-Pm/N0{}.jpg'.format(str(i)), 1])
+                    self.items.append(['.../pm/Non-Pm/N0{}.jpg'.format(str(i)), 1])
 
       
 
